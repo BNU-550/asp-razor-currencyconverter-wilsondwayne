@@ -6,6 +6,29 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Razor Pages</h1>
-    <h2>by Dwayne Wilson</h2>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2>by @Model.FirstName</h2>
+ 
+    <form>
+        <div class="form-group">
+            <label for="Name" class="col-sm-2 form-control-label">Name</label>
+            <div class="col-sn-4">
+                <input type="text" class="form-control" name="Name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Email1" class="col-sm-2 form-control-label">Email</label>
+            <div class="col-sn-4">
+                <input type="text" class="form-control" name="Email">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sn-4">
+                <button type="submit" class="btn btn-default"> Register</button>
+            </div>
+
+         </div>       
+    </form>
+
 </div>
