@@ -6,27 +6,31 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Razor Pages</h1>
-    <h2>by @Model.FirstName</h2>
+    <h2>by @Model.FullName</h2>
  
     <form>
         <div class="form-group">
             <label for="Name" class="col-sm-2 form-control-label">Name</label>
             <div class="col-sn-4">
-                <input type="text" class="form-control" name="Name">
+                <input type="text" class="form-control" required="true" placeholder="Enter your full name" asp-for="FullName">
             </div>
         </div>
 
         <div class="form-group">
-            <label for="Email1" class="col-sm-2 form-control-label">Email</label>
+            <label for="email" class="col-sm-2 form-control-label">Email</label>
             <div class="col-sn-4">
-                <input type="text" class="form-control" name="Email">
+                <input type="email" class="form-control" required="true" placeholder="enter your email adress"="email">
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sn-4">
-                <button type="submit" class="btn btn-default"> Register</button>
+                <button type="submit" class="btn btn-danger"> Register</button>
             </div>
+
+            <p class="col-sm-12">
+                @ViewData["Message"]
+            </p>
 
          </div>       
     </form>
